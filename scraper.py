@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup, SoupStrainer
 import MySQLdb
 from cgi import escape
 from collections import Counter
+import textwrap
 
 # connect
 db = MySQLdb.connect(host="localhost", user="root", passwd="root", db="jvdata", unix_socket='/Applications/MAMP/tmp/mysql/mysql.sock')
@@ -112,6 +113,7 @@ def get_messages(page):
 			sys.stdout.write('\a')
 			sys.stdout.flush()
 			anchor_list.append(ancre)
+			sleep(1)
 
 		# red = "\033[31m";
 		# green = "\033[32m";
